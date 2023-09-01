@@ -15,6 +15,14 @@
     text-decoration: underline;
 }
 
+#description p a {
+    color: rgb(61, 61, 223);
+}
+
+#description p a:hover {
+    text-decoration: underline;
+}
+
 html {
     scroll-behavior: smooth;
 }
