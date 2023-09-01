@@ -66,3 +66,23 @@ document.getElementById("scrollToNext").addEventListener("click", function() {
     const aboutSection = document.getElementById("about");
     aboutSection.scrollIntoView({ behavior: 'smooth' });
 });
+
+const typingElements = document.querySelectorAll('.typing-text');
+
+function typeText(element, text, delay = 100) {
+    let index = 0;
+    const timer = setInterval(() => {
+        element.textContent = text.substring(0, index);
+        index++;
+        if (index > text.length) {
+            clearInterval(timer);
+            element.querySelector('.cursor').style.display = 'none'; // Hide cursor when typing is complete
+        }
+    }, delay);
+}
+
+typingElements.forEach(element => {
+    const text = element.textContent;
+    element.textContent = '';
+    typeText(element, text);
+});
