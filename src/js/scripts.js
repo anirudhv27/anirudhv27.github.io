@@ -72,7 +72,7 @@ document.addEventListener("scroll", function() {
     if (header) {
       let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight));
       // Move the gradient to the right based on the scroll position
-      let moveAmount = scrollPercentage * 100 * 5; // Move a full 100% over the entire scroll
+      let moveAmount = scrollPercentage * 100 * 7; // Move a full 100% over the entire scroll
       header.style.backgroundPosition = `0 -${100 - moveAmount}%`;
     }
   });

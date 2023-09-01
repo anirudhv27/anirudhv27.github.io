@@ -125,7 +125,9 @@ html {
     }
 }
 .gradient-swipe {
-    background-image: linear-gradient(to bottom, #dc3e26 49.9%, #71b379 50.1%);
+    background-image: 
+        linear-gradient(to top, #1686cd 49.9%, transparent 50.1%),
+        linear-gradient(30deg, #71B379 59.9%,#dc3e26 60.1%);
     background-size: 100% 200%; 
     background-position: 0 -100%;
 }
