@@ -60,7 +60,7 @@ html {
 .card {
     perspective: 1000px;
     width: 100%;
-    height: 375px; /* Adjust as needed */
+    height: 450px; /* Adjust as needed */
 }
 
 .card-inner {
@@ -124,3 +124,9 @@ html {
         opacity: 0;
     }
 }
+.gradient-swipe {
+    background-image: linear-gradient(to bottom, #dc3e26 49.9%, #71b379 50.1%);
+    background-size: 100% 200%; 
+    background-position: 0 -100%;
+}
+

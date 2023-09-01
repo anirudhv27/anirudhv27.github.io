@@ -67,3 +67,13 @@ document.getElementById("scrollToNext").addEventListener("click", function() {
     aboutSection.scrollIntoView({ behavior: 'smooth' });
 });
 
+document.addEventListener("scroll", function() {
+    const header = document.querySelector(".gradient-swipe");
+    if (header) {
+      let scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight));
+      // Move the gradient to the right based on the scroll position
+      let moveAmount = scrollPercentage * 100 * 5; // Move a full 100% over the entire scroll
+      header.style.backgroundPosition = `0 -${100 - moveAmount}%`;
+    }
+  });
+  
