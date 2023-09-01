@@ -67,18 +67,24 @@ document.getElementById("scrollToNext").addEventListener("click", function() {
     aboutSection.scrollIntoView({ behavior: 'smooth' });
 });
 
+
 const typingElements = document.querySelectorAll('.typing-text');
 
 function typeText(element, text, delay = 30) {
     let index = 0;
-    const timer = setInterval(() => {
-        element.textContent = text.substring(0, index);
-        index++;
-        if (index > text.length) {
-            clearInterval(timer);
-            element.querySelector('.cursor').style.display = 'none'; // Hide cursor when typing is complete
+    const cursor = element.querySelector('.cursor');
+
+    function type() {
+        if (index <= text.length) {
+            element.textContent = text.substring(0, index);
+            index++;
+            setTimeout(type, delay);
+        } else {
+            cursor.style.display = 'none'; // Hide cursor when typing is complete
         }
-    }, delay);
+    }
+
+    type();
 }
 
 typingElements.forEach(element => {
