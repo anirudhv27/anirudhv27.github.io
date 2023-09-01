@@ -69,7 +69,7 @@ document.getElementById("scrollToNext").addEventListener("click", function() {
 
 const typingElements = document.querySelectorAll('.typing-text');
 
-function typeText(element, text, delay = 100) {
+function typeText(element, text, delay = 30) {
     let index = 0;
     const timer = setInterval(() => {
         element.textContent = text.substring(0, index);
