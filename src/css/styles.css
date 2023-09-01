@@ -1,0 +1,105 @@
+/* styles.css */
+#robotics-blurb a {
+    color: rgb(61, 61, 223);
+}
+
+#robotics-blurb a:hover {
+    text-decoration: underline;
+}
+
+#youtube a {
+    color: rgb(61, 61, 223);
+}
+
+#youtube a:hover {
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+.nav-scrolled {
+    background-color: white !important; /* This changes the navbar background to white */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+}
+.nav-scrolled a {
+    color: black !important; /* Changes the text color to black */
+}
+.nav-scrolled button {
+    color: black !important; /* Changes the text color to black */
+}
+
+#resume-button {
+    color: white !important;
+}
+
+.card-container {
+    width: 300px; /* Initial width */
+    transition: width 0.3s ease-in-out;
+}
+
+.card-container:hover {
+    width: 350px; /* Expanded width on hover */
+}
+
+.card {
+    perspective: 1000px;
+    width: 100%;
+    height: 375px; /* Adjust as needed */
+}
+
+.card-inner {
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(-180deg);
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-front {
+    transform: rotateY(0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+}
+
+.card-back {
+    transform: rotateY(-180deg);
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+}
+
+#projectContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-items: center; /* Center the items horizontally */
+    align-items: start; /* Align items to the top */
+    justify-content: center;
+}
+
