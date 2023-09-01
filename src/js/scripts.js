@@ -76,4 +76,28 @@ document.addEventListener("scroll", function() {
       header.style.backgroundPosition = `0 -${100 - moveAmount}%`;
     }
   });
-  
+
+  document.getElementById('menuToggle').addEventListener('click', function() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.querySelector('.menu-icon');
+    
+    if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.add('close');
+    } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('close');
+    }
+});
+
+// Clicking away hides the dropdown
+document.addEventListener('click', function(event) {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    const menuIcon = document.querySelector('.menu-icon');
+    
+    if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('close');
+    }
+});

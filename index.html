@@ -17,9 +17,19 @@
   <nav class="w-full fixed top-0 z-50" id="navbar">
     <div class="container mx-auto flex justify-between items-center p-4">
       <a href="#" class="text-white text-3xl font-bold">Anirudh Valiveru</a>
-      <div class="space-x-4">
-        <a href="#about" class="text-white nav-link">About</a>
 
+      <!-- Hamburger Button -->
+      <button id="menuToggle" class="lg:hidden">
+        <div class="menu-icon">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </button>
+
+
+      <div id="navbarMenu" class="hidden lg:block space-x-4">
+        <a href="#about" class="text-white nav-link">About</a>
         <!-- Projects Dropdown -->
         <div class="relative inline-block text-left group">
           <button class="text-white inline-flex justify-center w-full nav-link" type="button">
@@ -50,6 +60,19 @@
         </a>
       </div>
     </div>
+
+    <!-- Full-screen Mobile Menu -->
+    <div id="mobileMenu"
+      class="hidden absolute top-full right-0 mr-2 mt-2 bg-white shadow-lg border rounded w-56 lg:hidden">
+      <!-- Mobile menu items here. Example: -->
+      <a href="#about" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">About</a>
+      <a href="#robotics" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Robotics</a>
+      <a href="#software" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Software</a>
+      <a href="#youtube" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Youtube</a>
+      <a href="https://drive.google.com/file/d/11cQeBaataev2zvcPerhgJVV-ZbzgWRm8/view?usp=sharing"
+        class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Resume/CV</a>
+    </div>
+
   </nav>
 
 

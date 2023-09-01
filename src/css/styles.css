@@ -130,5 +130,26 @@ html {
         linear-gradient(30deg, #71B379 59.9%,#dc3e26 60.1%);
     background-size: 100% 200%; 
     background-position: 0 -100%;
+    transition: background-position 0.1s ease-out;
 }
 
+.menu-icon .line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+    transition: all 0.3s;
+}
+
+.menu-icon.close .line:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+}
+
+.menu-icon.close .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.close .line:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+}
