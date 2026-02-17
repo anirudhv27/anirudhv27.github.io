@@ -8,101 +8,36 @@
   <title>Anirudh Valiveru</title>
   <link href="dist/output.css" rel="stylesheet">
   <link href="src/css/styles.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body class="bg-gray-100 font-sans">
-  <!-- Navbar -->
-  <nav class="w-full fixed top-0 z-50" id="navbar">
+<body class="font-sans theme-light">
+  <!-- Navbar (black and white) -->
+  <nav class="nav-bw w-full fixed top-0 z-50 bg-black" id="navbar">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="#" class="text-white text-3xl font-bold">Anirudh Valiveru</a>
+      <a href="#" class="text-white text-3xl font-bold nav-brand">Anirudh Valiveru</a>
 
-      <!-- Hamburger Button -->
-      <button id="menuToggle" class="lg:hidden">
-        <div class="menu-icon">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
-      </button>
-
-
-      <div id="navbarMenu" class="hidden lg:block space-x-4">
-        <a href="#about" class="text-white nav-link">About</a>
-        <!-- Projects Dropdown -->
-        <div class="relative inline-block text-left group">
-          <button class="text-white inline-flex justify-center w-full nav-link" type="button">
-            Projects
-            <!-- Arrow icon for dropdown -->
-            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-              aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd" />
-            </svg>
-          </button>
-
-          <!-- Dropdown Menu -->
-          <div
-            class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100">
-            <div class="py-1">
-              <a href="#robotics" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Research</a>
-              <a href="#software" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Software</a>
-              <a href="#youtube" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">YouTube</a>
-            </div>
-          </div>
-        </div>
-
-        <a href="https://drive.google.com/file/d/11cQeBaataev2zvcPerhgJVV-ZbzgWRm8/view?usp=sharing" id="resume-button"
-          class="bg-slate-600 hover:bg-slate-400 text-white font-bold py-2 px-4 rounded">
-          Resume/CV
-        </a>
+      <div class="flex items-center gap-4">
+        <button id="themeToggle"
+          class="theme-toggle border border-white/30 text-white hover:bg-white/10 transition-colors"
+          aria-label="Toggle dark mode">
+          <i class="fas fa-moon theme-icon-dark" aria-hidden="true"></i>
+          <i class="fas fa-sun theme-icon-light" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
-
-    <!-- Full-screen Mobile Menu -->
-    <div id="mobileMenu"
-      class="hidden absolute top-full right-0 mr-2 mt-2 bg-white shadow-lg border rounded w-56 lg:hidden">
-      <!-- Mobile menu items here. Example: -->
-      <a href="#about" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">About</a>
-      <a href="#robotics" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Robotics</a>
-      <a href="#software" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Software</a>
-      <a href="#youtube" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Youtube</a>
-      <a href="https://drive.google.com/file/d/11cQeBaataev2zvcPerhgJVV-ZbzgWRm8/view?usp=sharing"
-        class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Resume/CV</a>
-    </div>
-
   </nav>
 
-
-
-  <!-- Splash Page -->
-
-
-  <header id='splash' class="h-screen flex flex-col justify-center items-center gradient-swipe text-white text-center">
-    <h1 class="text-6xl font-bold mb-2">Anirudh Valiveru</h1>
-    <p class="text-3xl">Advancing artificial intelligence and building cool software at MIT.</p>
-    <p class="text-2xl mt-2">YouTube Creator.</p>
-    <div class="absolute bottom-8 w-full text-center">
-      <button id="scrollToNext"
-        class="bg-transparent p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <i class="fas fa-chevron-down"></i>
-      </button>
-    </div>
-
-  </header>
-
-  <div class="px-10 xl:px-40 2xl:px-72 bg-white">
-    <!-- Introduction Section -->
-    <section id="about" class="pt-32 bg-white flex items-center">
+  <div class="about-page-center page-content px-10 xl:px-40 2xl:px-72 flex items-center pt-20">
+    <!-- About Section -->
+    <section id="about" class="about-section py-24 flex items-center w-full">
       <div
-        class="container mx-auto flex flex-col lg:flex-row space-y-12 lg:space-y-0 lg:space-x-12 items-center justify-center">
-        <div class="lg:w-2/5">
+        class="container mx-auto flex flex-col lg:flex-row space-y-12 lg:space-y-0 lg:space-x-8 items-center justify-center">
+        <div class="lg:w-1/5 flex flex-col items-center justify-center">
           <!-- Profile Picture -->
-          <img src="src/img/pfp.png" alt="Anirudh Valiveru" class="w-full rounded-lg">
+          <img src="src/img/pfp-grad.jpg" alt="Anirudh Valiveru" class="w-3/4 rounded-full">
 
-          <!-- Social Media Icons (You may need external libraries or SVGs for the icons) -->
+          <!-- Social Media Icons -->
           <div class="flex justify-center space-x-8 mt-2">
             <a href="https://www.linkedin.com/in/avaliveru/" class="hover:text-blue-700 text-xl"><i
                 class="fab fa-linkedin"></i></a>
@@ -110,298 +45,41 @@
                 class="fab fa-twitter"></i></a>
             <a href="https://www.youtube.com/channel/UChWy2K9h0SLwSga6-isVFSg" class="hover:text-red-700 text-xl"><i
                 class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/ani.v27/" class="hover:text-pink-700 text-xl"><i
-                class="fab fa-instagram"></i></a>
             <a href="https://github.com/anirudhv27" class="hover:text-gray-500 text-xl"><i
                 class="fab fa-github"></i></a>
-
           </div>
         </div>
 
         <!-- Description -->
-        <div id="description" class="lg:w-3/5">
-          <h2 class="text-4xl font-bold">About Me</h2>
+        <div id="description" class="lg:w-4/5">
+          <h2 class="text-4xl font-bold heading-wipe">Hi, I'm Ani! <span aria-label="waving hand" role="img">👋</span></h2>
           <div class="flex flex-col space-y-4">
 
             <p class="text-gray-600 text-lg pt-4">
-              Hi, I’m Anirudh. I am a final-year at MIT pursuing my B.S. in Computer Science and
-              Engineering (Course 6-3). I am also concurrently pursuing my MEng concentrated in Artificial Intelligence through the EECS department. I’m interested in harnessing technology and machine intelligence to
-              streamline the systems in our own lives. Recently, I worked as a machine learning engineer at <a href="https://www.moveworks.com/">Moveworks</a>, enabling user-level personalization for the company's agentic AI chatbot for employee support automation. Previously, I worked as an embedded software engineer on
-              <a href="https://www.nuro.ai/">Nuro’s</a> self-driving
-              vehicles.
+              I am a member of technical staff at <a href="https://www.decagon.ai/">Decagon</a>, building the agent
+              development platform for our AI concierge.
+            </p>
+
+            <p class="text-gray-600 text-lg">
+              I graduated from <a href="https://www.mit.edu/">MIT</a> with a major in Course 6-3 (Computer
+              Science and Engineering). While there, I worked on robotic perception and neural scene representations
+              with MIT's
+              <a href="https://www.scenerepresentations.org/">Scene Representation Group</a>, and ran MIT
+              Entrepreneurship Club's <a href="https://mec.mit.edu/starthouse/program">StartHouse</a>.
             </p>
             <p class="text-gray-600 text-lg">
-              I am an eager learner fascinated by the prospect of harnessing machine learning to devise systems capable
-              of
-              replicating human intelligence. People operate in a physical world, and I have been interested in building
-              useful scene representations for robots through my research with MIT's <a
-                href="https://www.scenerepresentations.org/">Scene Representation Group</a> at
-              the
-              <a href="https://www.csail.mit.edu/">Computer Science & AI Lab (CSAIL)</a>.
-            </p>
-            <p class="text-gray-600 text-lg">
-              Some hobbies that I have include <a href="https://www.youtube.com/channel/UChWy2K9h0SLwSga6-isVFSg">making
-                Youtube videos</a>, teaching high-schoolers through <a href="https://momentumai.org/">Momentum AI</a>,
-              learning languages (I speak 5!) and dancing for MIT’s competitive fusion dance team, <a
-                href="//mirchi.mit.edu/">MIT Mirchi</a>.
+              I build systems that think, adapt, and quietly erase busywork. To this aim, I've worked on robotic
+              perception, automated video editing, and now Decagon's AI concierge builder, where we enable non-technical
+              teams to design their
+              own agentic experiences. Intelligence shouldn't be gated by code.
             </p>
           </div>
-
-          <a href="https://docs.google.com/document/d/1rTaNJ8h0sFjVIYG7p5Dr7cyuk8N-_X9plHpy2PEBZ7o/edit?usp=sharing"
-            class="mt-4 inline-block py-2 px-6 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">Resume/CV</a>
         </div>
-      </div>
-    </section>
-
-    <!-- What am I up to? (Cards here, details below) -->
-    <section id="activities" class="pt-32 bg-white">
-      <!-- You can expand upon this with the card hover/expand effects -->
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold">What am I up to?</h2>
-        <hr class='w-32 border-2 border-blue-500 my-5'>
-        <!-- Summary Cards -->
-
-        <div class="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-12 mt-10">
-          <a href="#robotics"
-            class="md:w-1/3 rounded overflow-hidden shadow-lg my-2 hover:scale-105 transition-transform">
-            <div class="flex justify-center">
-              <img class="w-3/4 rounded-md" src="src/img/ai.png" alt="AI">
-            </div>
-            <div class="px-6 py-4">
-              <div class="font-bold text-2xl mb-2">AI & Robotics Research</div>
-              <p class="text-gray-700 text-base">
-                Exploring the frontiers of robotic intelligence and AI perception as an undergraduate researcher with
-                the Scene Representation group.
-              </p>
-            </div>
-          </a>
-
-          <a href="#software"
-            class="md:w-1/3 rounded overflow-hidden shadow-lg my-2 hover:scale-105 transition-transform">
-            <img class="w-full" src="src/img/computer.jpeg" alt="Computer">
-            <div class="px-6 py-4">
-              <div class="font-bold text-2xl mb-2">Building Software</div>
-              <p class="text-gray-700 text-base">
-                I enjoy building software products that solve everyday problems. Check out some of my favorites!
-              </p>
-            </div>
-          </a>
-
-          <a href="#youtube"
-            class="md:w-1/3 rounded overflow-hidden shadow-lg my-2 hover:scale-105 transition-transform">
-            <div class="flex justify-center">
-              <img class="w-4/6 center" src="src/img/youtube.jpeg" alt="Youtube">
-            </div>
-            <div class="px-6 py-4">
-              <div class="font-bold text-2xl mb-2">Youtube</div>
-              <p class="text-gray-700 text-base">
-                Shedding light on my tech journey at MIT and beyond through videos. Built an audience with over 465,000
-                views and 8,400+ subscribers.
-              </p>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Each detailed section (Robotics Research, Software, YouTube) -->
-    <!-- Add content and styling as needed. This is a placeholder structure -->
-
-    <!-- Robotics Research -->
-    <section id="robotics" class="pt-24 bg-white">
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold">AI & Robotics Research</h2>
-        <hr class='w-32 border-2 border-blue-500 my-5'>
-
-        <div class="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-12">
-          <div id="robotics-blurb">
-            <p class="mt-4 text-gray-600 text-lg">I am fascinated by the prospect of enabling generalizable everyday
-              automation
-              (think personal robots or self-driving cars!) using recent advances in deep learning.</p>
-            <p class="mt-4 text-gray-600 text-lg">In my work as a <a href="https://superurop.mit.edu/">SuperUROP</a>
-              scholar in the <a href="https://www.scenerepresentations.org/">Scene
-                Representation Group</a>
-              with
-              <a href="https://people.csail.mit.edu/boyuanc/">Boyuan Chen</a> and <a
-                href="https://www.vincentsitzmann.com/">Dr. Vincent Sitzmann</a>, I investigate novel neural scene
-              representation
-              approaches to push
-              the boundaries of robotic manipulation. I also collaborate heavily with the <a
-                href="https://groups.csail.mit.edu/locomotion/index.html">Robot Locomotion Group</a>
-              and professor Russ Tedrake.
-            </p>
-            <p class="mt-4 text-gray-600 text-lg">I also develop curriculum for <a
-                href="https://momentumai.org/">Momentum AI</a>, an MIT organization
-              that
-              hosts camps for students in the Boston area to learn about artificial intelligence.</p>
-          </div>
-
-          <div class="flex flex-col md:flex-row lg:flex-col space-y-10 justify-center items-center">
-            <img class="w-full md:w-3/4 lg:w-full h-full md:h-3/4 lg:h-full shadow-lg rounded-xl" src="src/img/srg.png"
-              alt="srg">
-            <div class="flex flex-row md:flex-col lg:flex-row items-center w-full space-x-12 pr-12 pl-4">
-              <img class="w-1/2 md:w-full lg:w-1/2 h-full md:h-1/2 lg:h-full" src="src/img/momentum.png" alt="Momentum">
-              <img class="w-1/2 md:w-full lg:w-1/2 h-full md:h-1/2 lg:h-full" src="src/img/csail.png" alt="CSAIL">
-            </div>
-          </div>
-
-
-        </div>
-
-        <h2 class="text-2xl font-bold mt-10">My Robotics Research Projects</h2>
-        <hr class='w-32 border-2 border-blue-500 my-2'>
-
-        <div class="flex flex-col lg:flex-row lg:-mx-4">
-
-          <!-- Grasp Inpainting Project -->
-          <section class="flex flex-col p-6 rounded shadow-lg my-4 mx-4 flex-1">
-            <div class="flex-grow">
-              <h2 class="text-xl font-semibold italic">Grasp Inpainting: An End-to-End Approach</h2>
-              <p class="text-l italic">Advances in Computer Vision Final Project</p>
-              <p class="my-2">
-                In this research project, I developed an end-to-end dataset generation pipeline using inpainting
-                techniques
-                to supervise downstream grasping tasks through imitation learning. My method leverages recent
-                advancements
-                in image generative modeling, off-the-shelf segmentation, and single-view 3D reconstruction to inpaint
-                robot
-                hands on any image, enabling the self-supervision of imitation learning tasks.
-              </p>
-            </div>
-            <div>
-              <a href="https://docs.google.com/presentation/d/1KWBD_rODBest1UEIIu7UTccn479lv1KC5sBhPdypZ80/edit?usp=sharing"
-                class="text-blue-500 hover:underline" target="_blank">Presentation
-                Slides</a> |
-              <a href="https://drive.google.com/file/d/1lV7rkH74-Skpp00Ms6jq7b5TBRGTs18A/view?usp=sharing"
-                class="text-blue-500 hover:underline ml-2" target="_blank">Read the Paper</a>
-            </div>
-          </section>
-
-          <!-- Intersection Data Imputation Project -->
-          <section class="flex flex-col p-6 rounded shadow-lg my-4 mx-4 flex-1">
-            <div class="flex-grow">
-
-              <h2 class="text-xl font-semibold italic">Intersection Data Imputation</h2>
-              <p class="text-l italic">TRB (Transportation Research Board) 2023</p>
-              <p class="my-2">
-                This project involved developing environment models describing 9 large American cities for downstream
-                reinforcement learning tasks, specifically to train an eco-friendly autonomous vehicle fleet control
-                policy.
-                Our study analyzed hundreds of thousands of intersections on OpenStreetMaps and found several examples
-                of
-                intersections without a clear representation of intersection geometry. Our method, which was developed
-                in
-                collaboration with the Utah Department of Transportation, was able to recover intersection geometry,
-                turn
-                data, speed limit, and gradient information for use in the lab's reinforcement learning projects.
-              </p>
-            </div>
-            <div>
-              <a href="https://docs.google.com/presentation/d/1Tv0L05edn25vOG4MH_UJXl79oB4VFgoWsBQS4lHY_zs/edit?usp=sharing"
-                class="text-blue-500 hover:underline" target="_blank">Presentation
-                Slides</a> |
-              <a href="https://drive.google.com/file/d/1nlFLrYm25tsekBxhn1GZr3Irr2lqchAU/view?usp=sharing"
-                class="text-blue-500 hover:underline ml-2" target="_blank">Read the Paper</a>
-            </div>
-
-          </section>
-
-          <!-- MIT SuperUROP Project -->
-          <section class="flex flex-col p-6 rounded shadow-lg my-4 mx-4 flex-1">
-            <div class="flex-grow">
-              <h2 class="text-xl font-semibold italic">Learning Dexterous Robot Grasps from Human Video Demonstrations
-              </h2>
-              <p class="text-l italic">MIT SuperUROP Project</p>
-              <p class="my-2">
-                As a part of MIT's SuperUROP program, this proposed project plans to explore methods to learn dexterous
-                grasping skills solely through human video demonstrations. We plan to solve this problem with the key
-                challenges of <i>mobile manipulation</i> in mind, where a robot is limited to its on-board perception
-                capabilities to complete tasks in unknown environments. We hope to leverage recent advancements in 3D
-                perception and scene representation to learn a functional and accurate world model to help a robot build
-                a
-                dynamic understanding of its surroundings.
-              </p>
-            </div>
-
-            <a href="https://docs.google.com/document/d/1NYOKtG7ZLQ5EqukCXc2B-2xCUdv0qqL55PZ4YTSEU7c/edit?usp=sharing"
-              class="text-blue-500 hover:underline ml-2" target="_blank">Read the Project Proposal</a>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <!-- Software I've Built -->
-    <section id="software" class="pt-24 bg-white">
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold">Software I’ve Built</h2>
-        <hr class='w-32 border-2 border-blue-500 my-5'>
-        <!-- Gallery View -->
-        <div id="projectContainer" class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Software Project Cards will be dynamically added here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- YouTube -->
-    <section id="youtube" class="py-24 bg-white">
-      <div class="container mx-auto">
-        <h2 class="text-4xl font-bold">Youtube</h2>
-        <hr class='w-32 border-2 border-blue-500 my-5'>
-        <p class="mt-4 text-gray-600 text-lg">On my <a href="https://www.youtube.com/@anivaliveru">Youtube
-            Channel</a>, I provide an inside look into what life
-          is like at MIT, complete with vlogs, interviews, and Q&As to take my viewers through my journey in tech. I
-          hope to bring
-          the incredible conversations and experiences that I have been fortunate to experience at MIT and inspire
-          my viewers to pursue their dreams in tech. Check out some of my vids!</p>
-
-        <div class="flex flex-col lg:flex-row w-full lg:space-x-4 space-y-6 lg:space-y-0 py-8">
-          <div class="lg:w-1/2">
-            <div class="max-w-lg mx-auto bg-white rounded shadow overflow-hidden hover:scale-105 transition-transform">
-              <iframe width="100%" height="290" src="https://www.youtube.com/embed/3VWS4x0AxIk" frameborder="0"
-                allowfullscreen></iframe>
-              <div class="p-4">
-                <h2 class="text-lg font-bold mb-2">An Exciting Day In The Life of an MIT Computer Science Student </h2>
-                <p class="text-gray-700">An exciting day of my life during midterms, complete with
-                  beautiful shots of campus, sailing on the Charles River, an insider's look at my dance team, and tips
-                  and tricks about surviving at the #1 STEM school in the country!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:w-1/2">
-            <!-- Add youtube videos here -->
-            <div class="max-w-lg mx-auto bg-white rounded shadow overflow-hidden hover:scale-105 transition-transform">
-              <iframe width="100%" height="290" src="https://www.youtube.com/embed/ti76mkP7DKU" frameborder="0"
-                allowfullscreen></iframe>
-              <div class="p-4">
-                <h2 class="text-lg font-bold mb-2">An Inside Look at San Francisco's Cutting-Edge AI Hacking Scene! |
-                  Scale AI Hackathon 2023
-                </h2>
-                <p class="text-gray-700">Watch me document my exhilarating day at the Scale Generative AI hackathon,
-                  where I show our roller-coaster experience developing SnapLingua, an app to learn vocabulary in your
-                  downtime.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-        <!-- Add clickable cards as described -->
       </div>
     </section>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-blue-500 text-white text-center py-4">
-    &copy; 2023 Anirudh Valiveru
-  </footer>
-
   <script src="src/js/scripts.js"></script>
-  <script src="src/js/project-cards.js"></script>
-
 </body>
 
 </html>
